@@ -503,7 +503,7 @@ section .location {
 }
 
 #skills .item {
-  width: 16em;
+  width: calc(100% / 4);
 }
 
 #skills .item .keywords {
