@@ -714,7 +714,7 @@ section .location {
     font-weight: 600;
   }
   #skills .item {
-    width: calc(100% / 3);
+    width: calc(100% / 4);
     padding: 0;
   }
   .highlights {
