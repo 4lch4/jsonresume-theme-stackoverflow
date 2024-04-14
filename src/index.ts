@@ -1,14 +1,19 @@
 import Handlebars from 'handlebars'
 import path from 'path'
-import { type FullResume } from './Resume'
 import { birthDate, dateHelpers, paragraphSplit, spaceToDash, toLowerCase } from './theme/helpers'
 
+// #region Constants
 /** Resolves to full path for the `./theme` directory. */
 const ThemeDir = path.join(__dirname, 'theme')
 
 /** Resolves to full path for the `./theme/partials` directory. */
 const partialsDir = path.join(ThemeDir, 'partials')
 
+/** Default margin for PDF files. */
+const pdfMargin = '0.8 cm'
+// #endregion Constants
+
+// #region Register Helpers
 Handlebars.registerHelper('birthDate', birthDate)
 Handlebars.registerHelper('MY', dateHelpers.MY)
 Handlebars.registerHelper('Y', dateHelpers.Y)
@@ -16,10 +21,11 @@ Handlebars.registerHelper('DMY', dateHelpers.DMY)
 Handlebars.registerHelper('paragraphSplit', paragraphSplit)
 Handlebars.registerHelper('toLowerCase', toLowerCase)
 Handlebars.registerHelper('spaceToDash', spaceToDash)
+// #endregion Register Helpers
 
-export async function render(resume: FullResume) {
-  const css = await Bun.file(path.join(__dirname, 'index.css')).text()
-  const template = await Bun.file(path.join(__dirname, 'index.hbs')).text()
+export async function render(resume: any) {
+  const css = await Bun.file(path.join(ThemeDir, 'index.css')).text()
+  const template = await Bun.file(path.join(ThemeDir, 'index.hbs')).text()
 
   const partialsGlob = new Bun.Glob('**/*.hbs')
 
@@ -32,8 +38,6 @@ export async function render(resume: FullResume) {
 
   return Handlebars.compile(template)({ css, resume })
 }
-
-const pdfMargin = '0.8 cm'
 
 export const pdfRenderOptions = {
   margin: {

@@ -36,14 +36,16 @@
     "dev": "bun run --watch ./src/index.ts",
     "lint": "prettier -c .",
     "pretty": "prettier --write .",
-    "start": "bun run ./src/index.ts"
+    "start": "bun run ./src/index.ts",
+    "test": "bun run test/index.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
     "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
     "markdown-it": "^13.0.2",
-    "moment": "^2.30.1"
+    "moment": "^2.30.1",
+    "picocolors": "^1.0.0"
   },
   "devDependencies": {
     "@types/bun": "^1.0.12",
