@@ -12,7 +12,7 @@
     "email": "hey@4lch4.email",
     "url": "https://4lch4.com"
   },
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "handlebars": "^4.7.8",
     "markdown-it": "^13.0.2",

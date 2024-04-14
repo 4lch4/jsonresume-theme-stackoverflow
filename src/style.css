@@ -592,6 +592,7 @@ section .location {
     width: 80%;
     margin: 0 auto;
   }
+
   .section header .date {
     float: right;
     font-weight: 600;
@@ -607,34 +608,42 @@ section .location {
   li {
     margin-left: 1.5em;
   }
+
   #resume {
     width: 820px;
     margin: 2rem auto;
   }
+
   .section > section > header .space-left {
     opacity: 1;
     cursor: pointer;
   }
+
   .section > section:not(.main-summary) {
     margin-left: 1.67rem;
   }
+
   .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: '| ';
   }
+
   .header-left {
     float: left;
     width: 70%;
     word-break: normal;
   }
+
   .section header .date {
     padding: 0.2em;
   }
+
   .display {
     display: none;
   }
+
   .display:not(.none) {
     display: block;
   }
@@ -644,6 +653,7 @@ section .location {
   #profiles a:not(.hide-href-print)::after {
     content: ' (' attr(href) ') ';
   }
+
   #resume {
     margin: 0.1em;
     padding: 0.1em;
@@ -651,51 +661,65 @@ section .location {
     word-wrap: break-word;
     line-height: 1.25;
   }
+
   @page {
     margin: 1cm 1.4cm;
   }
+
   .item-count {
     display: none;
   }
+
   .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: 'at ';
   }
+
   .main-summary {
     padding: 0;
     background: transparent;
   }
+
   .section {
     margin: 0.8rem 0;
     padding: 0;
   }
+
   .section header {
     padding-bottom: 0.15rem;
   }
+
   .section .location {
     padding-bottom: 0.15rem;
   }
+
   .section > section > section {
     margin: 0 0 1em 0;
   }
+
   .section > section > section:last-of-type {
     margin: 0;
   }
+
   .stack-overflow::after {
     content: '';
   }
+
   .fa.social {
     color: #828386;
   }
+
   ul {
     margin-top: 0.4em;
   }
+
   ul,
   li {
     padding: 0;
   }
+
   ul.keywords li,
   ul.courses li {
     margin: 0;
@@ -703,54 +727,68 @@ section .location {
     font-size: 0.8rem;
     background: transparent;
   }
+
   ul.keywords li::after,
   ul.courses li::after {
     padding: 0 0 0 0.1rem;
     content: ' |';
   }
+
   ul.keywords::before,
   ul.courses::before {
     font-size: 0.8rem;
     font-weight: 600;
   }
+
   #skills .item {
     width: calc(100% / 4);
     padding: 0;
   }
+
   .highlights {
     margin: 0.5em 0 0 0;
   }
+
   ul.keywords::before {
     content: 'Skills acquired: ';
   }
+
   #skills .keywords::before {
     content: none;
   }
+
   .section p {
     margin: 0;
     padding: 0;
   }
+
   ul.courses::before {
     content: 'Major courses: ';
   }
+
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {
     content: '';
   }
+
   .level em {
     font-style: normal;
     padding: 0.1em 0;
   }
+
   .level .bar {
     display: none;
   }
+
   #profiles .item {
     padding: 0;
   }
+
   .item.display {
     display: block;
     opacity: 1 !important;
   }
+
   .fa-map-marker-alt:before {
     padding-left: 0.1em;
   }
