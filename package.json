@@ -1,7 +1,18 @@
 {
   "name": "@4lch4/jsonresume-theme-stackoverflow",
+  "displayName": "JSON Resume Stack Overflow Theme",
   "version": "2.0.6",
   "description": "Stack Overflow theme for JSON Resume",
+  "keywords": [
+    "jsonresume",
+    "resume",
+    "4lch4"
+  ],
+  "homepage": "https://github.com/4lch4/jsonresume-theme-stackoverflow",
+  "bugs": {
+    "url": "https://github.com/4lch4/Test/issues",
+    "email": "bugs@4lch4.email"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/4lch4/jsonresume-theme-stackoverflow"
@@ -12,7 +23,21 @@
     "email": "hey@4lch4.email",
     "url": "https://4lch4.com"
   },
-  "main": "src/index.js",
+  "type": "module",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "files": [
+    "src",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "bun run --watch ./src/index.ts",
+    "lint": "prettier -c .",
+    "pretty": "prettier --write .",
+    "start": "bun run ./src/index.ts"
+  },
   "dependencies": {
     "handlebars": "^4.7.8",
     "markdown-it": "^13.0.2",
@@ -22,6 +47,9 @@
     "prettier": "^3.2.5",
     "prettier-plugin-organize-imports": "^3.2.4",
     "prettier-plugin-packagejson": "^2.5.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   },
   "publishConfig": {
     "access": "public"
